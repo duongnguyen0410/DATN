@@ -1,0 +1,9 @@
+# ignore for docker-compose
+
+node_modules/
+mock/node_modules/
+mock/.vscode/
+webpack-demo/
+ant/
+ref/
+mysql-microservice/

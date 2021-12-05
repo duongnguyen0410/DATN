@@ -1,0 +1,24 @@
+.DS_Store
+
+node_modules/
+mock/node_modules/
+mock/.vscode/
+webpack-demo/
+ant/
+ref/
+mysql-microservice/data/
+mysql-microservice/handle-data/
+
+# For yarn config
+.yarn
+.pnp.js
+
+# custom setting
+.vscode
+.prettierrc
+
+#ignore Intelij IDE
+.idea
+
+#ignore enviroment file
+# /env/.env

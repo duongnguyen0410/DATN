@@ -1,0 +1,42 @@
+version: '3.5'
+services:
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        ports: 
+            - 6603:3306
+        restart: always
+        env_file: 
+            - ./env/mysql.env
+        expose: 
+            - 6603
+        volumes: 
+            - ./mysql-microservice/init:/docker-entrypoint-initdb.d/
+            - ./mysql-microservice/data:/var/lib/mysql
+            - ./mysql-microservice/startup:/startup
+    app: #For build new image from Dockerfile
+        build: .
+        container_name: app
+        env_file: 
+            - ./env/app.env
+        links: 
+            - mysql:db
+        ports: 
+            - 4000:4000
+        depends_on: 
+            - mysql
+    # app: #For run from image exits
+    #     image: node:14
+    #     container_name: app
+    #     env_file: 
+    #         - ./env/app.env
+    #     links: 
+    #         - mysql:db
+    #     volumes:
+    #         - .:/usr/src/app
+    #     working_dir: /usr/src/app
+    #     command: bash startup/startup.sh
+    #     ports: 
+    #         - 4000:4000
+    #     depends_on: 
+    #         - mysql

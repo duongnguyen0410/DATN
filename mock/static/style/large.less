@@ -1,0 +1,22 @@
+/* From 768 to maximum px */
+@media (min-width: 768px) {
+  .ant-layout-sider-collapsed {
+    display: block;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .slider,
+  .ant-layout-sider {
+    position: relative !important;
+    max-width: 200px !important;
+    width: 200px !important;
+  }
+  .trigger-small {
+    display: none !important;
+  }
+  .ant-modal {
+    @modal-width: 700px;
+    max-width: @modal-width !important;
+    width: @modal-width !important;
+  }
+}

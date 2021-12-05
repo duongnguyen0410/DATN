@@ -1,0 +1,27 @@
+/* Smaller 767 px => small screen*/
+@media (max-width: 767px) {
+  .ant-layout-sider-collapsed {
+    display: none;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .slider,
+  .ant-layout-sider {
+    max-width: 100% !important;
+    width: 100% !important;
+    position: fixed !important;
+    height: 100%;
+  }
+  .trigger-small {
+    float: right;
+    margin-right: 10px;
+    color: white;
+  }
+  .ant-modal {
+    max-width: 95% !important;
+    width: 95% !important;
+  }
+  .small-modal {
+    top: 20px;
+  }
+}
