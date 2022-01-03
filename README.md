@@ -15,7 +15,6 @@ Requires
 Install project in local host
 
 ```sh
-git clone git@github.com:IT440920201/Nhom_25.git
 $ npm install
 ```
 
