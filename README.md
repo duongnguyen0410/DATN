@@ -22,7 +22,7 @@ By default, database name is: internship
 
 Before start server, you must setup for MySQL with at least data default in ~/mysql-microservice/init/init.sql file.
 
-Copy and paste data into file and run in SQL query tab. You can login with accout: giapdong - giapdong (admin role)
+Copy and paste data into file and run in SQL query tab. You can login with accout: admin - admin (admin role)
 
 Run server
 
@@ -47,7 +47,7 @@ Các collection, table,.. đều phải để định dạng là utf8_unicode_ci
 ```sh
 $ cd mysql-microservice
 $ docker build -t project-docker-mysql .
-$ docker run -d --publish 6603:3306 --mount type=bind,source="$(pwd)"/handle-data,destination=/var/lib/mysql --name project-mysql-microservice project-docker-mysql
+$ docker run -d --publish 6603:3307 --mount type=bind,source="$(pwd)"/handle-data,destination=/var/lib/mysql --name project-mysql-microservice project-docker-mysql
 ```
 
 App service
